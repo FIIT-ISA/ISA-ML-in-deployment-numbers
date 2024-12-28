@@ -1,0 +1,135 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.graphs-container {
+    width: 1000px;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.graph-box {
+    height: 600px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.graph-box canvas {
+    display: block; /* Ensures each canvas is a block-level element */
+    height: 250px; /* Fixed height for each canvas */
+    margin-top: 20px;
+}
+
+.graph-box canvas:first-child {
+    margin-top: 0;
+}
+
+.controls-container {
+    display: flex;
+    border-top: 1px solid #ccc;
+    justify-content: space-between; /* Ensures groups are spaced out */
+    padding: 10px 0; /* Adds padding around the controls for spacing */
+}
+
+.button-group {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    gap: 8px; /* Adds a gap between items within the group */
+}
+
+.button-group button {
+    margin-right: 10px; /* Space between buttons */
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    gap: 4px; /* Adds a small gap between items */
+}
+
+.time-input {
+    width: 100%; /* Ensures the input takes the full width of its container */
+    max-width: 80px; /* Limits width of input boxes to maintain form */
+}
+
+.current-sequence {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #333; /* Dark grey for readability */
+}
+
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #007bff;
+    opacity: 0.5; 
+}
+
+.bar {
+    width: 40px;
+    height: 100px; /* Default height, will be overridden by JavaScript */
+    background-color: teal;
+    position: absolute;
+    bottom: 0;
+    margin: 5px;
+}
+
+canvas {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around items */
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 10px; /* Adds some space above the info box */
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    margin: 0 10px; /* Adds some horizontal space between paragraphs */
+    padding: 0;
+    white-space: nowrap; /* Ensures the text does not wrap */
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around; /* Evenly space the legend items */
+    margin-top: 10px; /* Space above the legend */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px; /* Space between the color box and text */
+}
+
+.legend-text {
+    font-size: 14px;
+}
