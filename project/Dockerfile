@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir torch==2.2.2+cpu -f https://download.pytorch.org/whl/torch_stable.html && \
+RUN pip install --no-cache-dir torch==2.6.0 && \
     pip install --no-cache-dir -r requirements.txt
 
 # Make port 5000 available to the world outside this container
