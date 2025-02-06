@@ -39,7 +39,7 @@ source venv\Scripts\activate.bat  # on Windows (cmd)
 
 To install the PyTorch CPU version run
 ```
-pip install torch==2.2.2+cpu torchvision==0.17.2+cpu -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==2.6.0
 ```
 After that go ahead and run
 ```
